@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:GlucoVault.Views" 
+       xmlns:controls="clr-namespace:GlucoVault.Controls"
+       x:Class="GlucoVault.Views.AppShell"
+       x:Name="shell">
+    
+   <!-- <Shell.FlyoutHeader>
+        <controls:FlyoutHeaderPage/>
+    </Shell.FlyoutHeader> -->
+
+    <FlyoutItem Title="MyTabApp1"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="bear.png" Title="Meal Planner">
+            <ShellContent ContentTemplate="{DataTemplate views:MealPlannerPage}"/>
+        </Tab>
+
+    </FlyoutItem>
+    
+    <FlyoutItem Title="MyTabApp2"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="dog.png" Title="Reminder">
+            <ShellContent ContentTemplate="{DataTemplate views:ReminderPage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <FlyoutItem Title="MyTabApp3"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="dog.png" Title="Info Centre">
+            <ShellContent ContentTemplate="{DataTemplate views:InfoCentrePage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="MyTabApp4"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="dog.png" Title="Blood Glucose">
+            <ShellContent ContentTemplate="{DataTemplate views:BloodGlucosePage}"/>
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="MyTabApp5"
+               Shell.TabBarIsVisible="False"
+               FlyoutDisplayOptions="AsMultipleItems">
+
+        <Tab Icon="dog.png" Title="Blood Pressure">
+            <ShellContent ContentTemplate="{DataTemplate views:BloodPressurePage}"/>
+        </Tab>
+    </FlyoutItem>
+
+    <ShellContent Title="Settings" Icon="monkey.png" ContentTemplate="{DataTemplate views:SettingsPage}"/>
+</Shell>
