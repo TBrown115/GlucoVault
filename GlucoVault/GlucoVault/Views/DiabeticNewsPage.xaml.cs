@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace GlucoVault.Controls
+namespace GlucoVault.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class FlyoutHeaderPage : ContentView
+    public partial class DiabeticNewsPage : ContentPage
     {
-        public FlyoutHeaderPage()
+        public DiabeticNewsPage()
         {
             InitializeComponent();
         }

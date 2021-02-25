@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GlucoVault.App">
     <Application.Resources>
-
+       <!-- <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/AppColors.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary> -->
     </Application.Resources>
 </Application>
