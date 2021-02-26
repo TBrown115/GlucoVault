@@ -25,7 +25,7 @@
                TargetType="Element"
                BasedOn="{StaticResource BaseStyle}">
             <Setter Property="Shell.BackgroundColor"
-                    Value="#039BE6" />
+                    Value="#F24900" />
         </Style>
         <Style x:Key="MonkeysShell"
                TargetType="Element"
@@ -62,17 +62,17 @@
         <Tab Icon="bear.png"
              Title="7 Day Plan">
             <ShellContent ContentTemplate="{DataTemplate views:MealPlannerPage}"
-                          Style="{StaticResource ElephantsShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="dog.png"
              Title="Meal Planner">
             <ShellContent ContentTemplate="{DataTemplate views:MealBuilder}"
-                          Style="{StaticResource BearsShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="cat.png"
              Title="Diabetic Recipes">
             <ShellContent ContentTemplate="{DataTemplate views:DiabeticRecipes}"
-                          Style="{StaticResource AboutShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
     </FlyoutItem>
 
