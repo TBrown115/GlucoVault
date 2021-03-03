@@ -79,7 +79,7 @@
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
                 Title="Reminder">
         <ShellContent ContentTemplate="{DataTemplate views:ReminderPage}"
-                      Style="{StaticResource ElephantsShell}"/>
+                      Style="{StaticResource DomesticShell}"/>
     </FlyoutItem>
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
@@ -87,17 +87,17 @@
         <Tab Icon="bear.png"
              Title="7 Day Plan">
             <ShellContent ContentTemplate="{DataTemplate views:InfoCentrePage}"
-                          Style="{StaticResource MonkeysShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="dog.png"
              Title="Diabetes Management">
             <ShellContent ContentTemplate="{DataTemplate views:DiabetesManagementPage}"
-                          Style="{StaticResource BearsShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="cat.png"
              Title="Diabetic News">
             <ShellContent ContentTemplate="{DataTemplate views:DiabeticNewsPage}"
-                          Style="{StaticResource ElephantsShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
     </FlyoutItem>
 
@@ -106,15 +106,15 @@
         <Tab Icon="bear.png"
              Title="Blood Pressure">
             <ShellContent ContentTemplate="{DataTemplate views:BloodPressurePage}"
-                          Style="{StaticResource MonkeysShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="dog.png"
              Title="Blood Glucose">
             <ShellContent ContentTemplate="{DataTemplate views:BloodGlucosePage}"
-                          Style="{StaticResource BearsShell}"/>
+                          Style="{StaticResource DomesticShell}"/>
         </Tab>
     </FlyoutItem>
 
     <ShellContent Title="Settings" ContentTemplate="{DataTemplate views:SettingsPage}"
-                  Style="{StaticResource AboutShell}"/>
+                  Style="{StaticResource DomesticShell}"/>
 </Shell>
