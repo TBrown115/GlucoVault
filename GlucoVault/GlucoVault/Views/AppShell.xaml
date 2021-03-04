@@ -4,7 +4,10 @@
        xmlns:views="clr-namespace:GlucoVault.Views" 
        xmlns:controls="clr-namespace:GlucoVault.Controls"
        x:Class="GlucoVault.Views.AppShell"
-       x:Name="shell">
+       x:Name="shell"
+       FlyoutBackgroundColor="Coral"
+       FlyoutHeaderBehavior="CollapseOnScroll"
+       FlyoutVerticalScrollMode="Enabled">
     <Shell.Resources>
         <Style x:Key="BaseStyle"
                TargetType="Element">
@@ -59,18 +62,18 @@
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
                  
                 Title="Meal Planner">
-        <Tab Icon="bear.png"
+        <Tab Icon="dinner.png"
              Title="7 Day Plan">
             <ShellContent ContentTemplate="{DataTemplate views:MealPlannerPage}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
-        <Tab Icon="dog.png"
+        <Tab Icon="cooking.png"
              Title="Meal Planner">
             <ShellContent ContentTemplate="{DataTemplate views:MealBuilder}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
-        <Tab Icon="cat.png"
-             Title="Diabetic Recipes">
+        <Tab Icon="recipe.png"
+             Title="Recipes">
             <ShellContent ContentTemplate="{DataTemplate views:DiabeticRecipes}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
@@ -84,18 +87,18 @@
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
                 Title="Info Centre">
-        <Tab Icon="bear.png"
-             Title="7 Day Plan">
+        <Tab Icon="list.png"
+             Title="Diabetic Facts">
             <ShellContent ContentTemplate="{DataTemplate views:InfoCentrePage}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
-        <Tab Icon="dog.png"
-             Title="Diabetes Management">
+        <Tab Icon="info.png"
+             Title="Managing Tips">
             <ShellContent ContentTemplate="{DataTemplate views:DiabetesManagementPage}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
-        <Tab Icon="cat.png"
-             Title="Diabetic News">
+        <Tab Icon="update.png"
+             Title="Latest News">
             <ShellContent ContentTemplate="{DataTemplate views:DiabeticNewsPage}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
@@ -103,12 +106,12 @@
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
                 Title="Vital Signs">
-        <Tab Icon="bear.png"
+        <Tab Icon="meter.png"
              Title="Blood Pressure">
             <ShellContent ContentTemplate="{DataTemplate views:BloodPressurePage}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
-        <Tab Icon="dog.png"
+        <Tab Icon="glucose.png"
              Title="Blood Glucose">
             <ShellContent ContentTemplate="{DataTemplate views:BloodGlucosePage}"
                           Style="{StaticResource DomesticShell}"/>
