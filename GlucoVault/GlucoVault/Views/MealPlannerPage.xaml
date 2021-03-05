@@ -17,6 +17,7 @@
                    HorizontalOptions="Center" 
                    Style="{DynamicResource TitleStyle}" /> -->
                 <StackLayout>
+                    <Label Text="Breakfast" FontSize="20"/>
                     <Label Text="{Binding SelectedDietary.Breakfast}"
                    FontAttributes="Italic" HorizontalOptions="Center" />
                 </StackLayout>
@@ -24,10 +25,12 @@
                    HeightRequest="200" WidthRequest="200"
                    HorizontalOptions="CenterAndExpand" /> -->
                 <StackLayout>
+                    <Label Text="Lunch" FontSize="20"/>
                     <Label Text="{Binding SelectedDietary.Lunch}" 
                    FontAttributes="Italic" HorizontalOptions="Center" />
                 </StackLayout>
                 <StackLayout>
+                    <Label Text="Supper" FontSize="20"/>
                     <Label Text="{Binding SelectedDietary.Dinner}" 
                    FontAttributes="Italic" HorizontalOptions="Center" />
                 </StackLayout>
