@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GlucoVault.ModelViews;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace GlucoVault.Views
         public MealPlannerPage()
         {
             InitializeComponent();
+            BindingContext = new DietariesPageViewModel();
         }
     }
 }

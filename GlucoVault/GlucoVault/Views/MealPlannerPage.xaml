@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GlucoVault.Views.MealPlannerPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Meal Planner!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Margin="20,35,20,20">
+                <Label Text="Dietary Plan" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" />
+                <Picker Title="Select a Dietary Plan" 
+                    TitleColor="Red"
+                    ItemsSource="{Binding Dietaries}" 
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedItem="{Binding SelectedDietary}" />
+              <!--  <Label Text="{Binding SelectedDietary.Name}" 
+                   HorizontalOptions="Center" 
+                   Style="{DynamicResource TitleStyle}" /> -->
+                <StackLayout>
+                    <Label Text="{Binding SelectedDietary.Breakfast}"
+                   FontAttributes="Italic" HorizontalOptions="Center" />
+                </StackLayout>
+                <!--<Image Source="{Binding SelectedDietary.ImageUrl}" 
+                   HeightRequest="200" WidthRequest="200"
+                   HorizontalOptions="CenterAndExpand" /> -->
+                <StackLayout>
+                    <Label Text="{Binding SelectedDietary.Lunch}" 
+                   FontAttributes="Italic" HorizontalOptions="Center" />
+                </StackLayout>
+                <StackLayout>
+                    <Label Text="{Binding SelectedDietary.Dinner}" 
+                   FontAttributes="Italic" HorizontalOptions="Center" />
+                </StackLayout>
+                
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
