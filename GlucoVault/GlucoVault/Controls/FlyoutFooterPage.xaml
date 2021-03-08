@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GlucoVault.Controls.FlyoutFooterPage">
+  <ContentView.Content>
+      <StackLayout>
+          <Frame HasShadow="True" >
+                <Label Text="GlucoVault"
+               TextColor="#32CD32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               FontSize="20"/>
+          </Frame>
+            
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>

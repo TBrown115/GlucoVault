@@ -25,7 +25,8 @@
                 Source="vault.jpg"
                 Grid.ColumnSpan="5"
                 Grid.RowSpan="4"
-                Opacity="0.6" />
+                Opacity="0.6" 
+                   BackgroundColor="White"/>
            <!-- <Image Source="vault.png" HeightRequest="80" WidthRequest="80" 
                 Grid.Column="1" 
                 Grid.Row="1"
