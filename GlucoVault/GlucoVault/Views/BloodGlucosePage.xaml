@@ -2,11 +2,65 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GlucoVault.Views.BloodGlucosePage">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to BloodGlucose!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <AbsoluteLayout>
+        <ScrollView 
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="SizeProportional">
+
+            <StackLayout >
+                <Grid Margin="0, 20, 0, 0" HorizontalOptions="FillAndExpand" VerticalOptions="Start" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Column="0" />
+                    <Label Grid.Column="1" Text="Blood Pressure" />
+                    <Label Grid.Column="2" Text="Blood Glucose Level" />
+                    <Label Grid.Column="3" Text="Time/Date" />
+                </Grid>
+
+                <ListView x:Name="listView"  ItemSelected="OnListItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid Margin="0" Padding="0" RowSpacing="0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Grid.Column="0" Source="https://img.icons8.com/bubbles/100/000000/combo-chart.png" HorizontalOptions="End" IsVisible="true" />
+                                        <Label Grid.Column="1" Text="{Binding BloodLevel}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                        <Label Grid.Column="2" Text="{Binding GlucLevel}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                        <Label Grid.Column="3" Text="{Binding CreatedOn}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+
+
+                                    </Grid>
+
+                                </ViewCell.View>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </StackLayout>
+        </ScrollView>
+        <ImageButton
+            Clicked="OnItemAdded"
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CornerRadius="200"
+            HeightRequest="80"
+            Source="https://img.icons8.com/cute-clipart/64/000000/plus.png"
+            />
+    </AbsoluteLayout>
 </ContentPage>

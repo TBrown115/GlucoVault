@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Todo.TodoItemPage" Title="{Binding Name}">
+    <AbsoluteLayout>
+        <ScrollView  AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="SizeProportional">
+            <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+
+                <StackLayout HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Entry WidthRequest="200"  Text="{Binding BloodLevel}" Placeholder="Blood Pressure" />
+                    <Entry WidthRequest="200"  Text="{Binding GlucLevel}" Placeholder="Glucose Level" />
+
+                </StackLayout>
+                
+
+
+            </StackLayout>
+        </ScrollView>
+        <ImageButton
+            Clicked="OnSaveClicked"
+            BackgroundColor="Transparent"
+             AbsoluteLayout.LayoutBounds="0.1,0.95,80,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CornerRadius="200"
+            HeightRequest="80"
+            Source="https://img.icons8.com/cute-clipart/64/000000/plus.png"
+            />
+
+        <ImageButton
+            Clicked="OnDeleteClicked"
+            BackgroundColor="Transparent"
+            AbsoluteLayout.LayoutBounds="0.95,0.95,80,80"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            CornerRadius="200"
+            HeightRequest="80"
+            Source="https://img.icons8.com/cute-clipart/64/000000/delete-sign.png"
+            />
+
+    </AbsoluteLayout>
+    
+    
+</ContentPage>
+

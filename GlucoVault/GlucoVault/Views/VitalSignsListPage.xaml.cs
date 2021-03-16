@@ -1,18 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Todo;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-namespace GlucoVault.Views
+namespace Todo
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class BloodGlucosePage : ContentPage
+    public partial class TodoListPage : ContentPage
     {
-        public BloodGlucosePage()
+        public TodoListPage()
         {
             InitializeComponent();
         }
