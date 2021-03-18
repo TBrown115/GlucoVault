@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Todo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microcharts;
+using SkiaSharp;
+using Entry = Microcharts.ChartEntry;
 
 namespace GlucoVault.Views
 {
@@ -30,6 +33,13 @@ namespace GlucoVault.Views
             await Navigation.PushAsync(new TodoItemPage
             {
                 BindingContext = new VitalSignsItem()
+            });
+        }
+
+        async void viewGraphPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChartsPage
+            {
             });
         }
 

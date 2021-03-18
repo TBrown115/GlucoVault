@@ -25,10 +25,13 @@ namespace Todo
             return Database.Table<VitalSignsItem>().ToListAsync();
         }
 
-        public Task<List<VitalSignsItem>> GetItemsNotDoneAsync()
+        public Task<VitalSignsItem> GetVitalItem(int id)
         {
-            return Database.QueryAsync<VitalSignsItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+            var chartValue = Database.Table<VitalSignsItem>().Where(x => x.ID == id).FirstOrDefaultAsync();
+            return chartValue;
         }
+
+   
 
         public Task<VitalSignsItem> GetItemAsync(int id)
         {
