@@ -4,37 +4,35 @@
              x:Class="GlucoVault.Views.MealPlannerPage"
              Title="Dietary Plan">
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Margin="20,35,20,20">
-                
-                <Picker Title="Click Here" 
-                    TitleColor="Red"
-                    ItemsSource="{Binding Dietaries}" 
-                    ItemDisplayBinding="{Binding Name}"
-                    SelectedItem="{Binding SelectedDietary}" />
-              <!--  <Label Text="{Binding SelectedDietary.Name}" 
-                   HorizontalOptions="Center" 
-                   Style="{DynamicResource TitleStyle}" /> -->
-                <StackLayout>
-                    <Label Text="Breakfast" FontSize="20"/>
-                    <Label Text="{Binding SelectedDietary.Breakfast}"
-                   FontAttributes="Italic" HorizontalOptions="Center" />
-                </StackLayout>
-                <!--<Image Source="{Binding SelectedDietary.ImageUrl}" 
-                   HeightRequest="200" WidthRequest="200"
-                   HorizontalOptions="CenterAndExpand" /> -->
-                <StackLayout>
-                    <Label Text="Lunch" FontSize="20"/>
-                    <Label Text="{Binding SelectedDietary.Lunch}" 
-                   FontAttributes="Italic" HorizontalOptions="Center" />
-                </StackLayout>
-                <StackLayout>
-                    <Label Text="Supper" FontSize="20"/>
-                    <Label Text="{Binding SelectedDietary.Dinner}" 
-                   FontAttributes="Italic" HorizontalOptions="Center" />
-                </StackLayout>
-                
-            </StackLayout>
-        </ScrollView>
+
+        <StackLayout>
+            <CollectionView ItemsSource="{Binding Dietaries}"
+                SelectionMode="Single"
+                SelectionChanged="OnSelectionChanged">
+                <CollectionView.ItemTemplate>
+                <DataTemplate>
+                        
+                        <Grid Padding="10"
+                  RowDefinitions="Auto, *"
+                  ColumnDefinitions="Auto, *">
+                            <StackLayout>
+                                <Label Text="Breakfast"/>
+                            </StackLayout>
+                            <Image Grid.RowSpan="2"
+                       Source="{Binding ImageUrl}"
+                       Aspect="AspectFill"
+                       HeightRequest="60"
+                       WidthRequest="60" />
+                            <Label Grid.Column="1"
+                       Text="{Binding Breakfast}"
+                       FontAttributes="Bold" />
+                            
+                   </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            </CollectionView>
+      
+        </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

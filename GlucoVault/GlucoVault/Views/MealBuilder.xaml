@@ -2,12 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GlucoVault.Views.MealBuilder"
-             Title="Meal Builder">
+             Title="Recipes">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+          <!--  <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Search for recipes"
+                   /> -->
+            <Label Text="Good.."/>
+            <ListView
+                HasUnevenRows="true" ItemsSource="{Binding DailyMealPlans}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Padding="10"
+                                ColumnSpacing="10"
+                                RowSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="80" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="80"/>
+                                </Grid.RowDefinitions>
+                                <Label Text="{Binding Ingredient}" Grid.Column="0" Grid.Row="0" />
+                                <Label Text="100 results" Grid.Column="1" Grid.Row="0" />
+                                <Image Source="vault.png" Grid.Column="0" Grid.Row="1" />
+                                <Label Text="Read" Grid.Column="1" Grid.Row="1" />
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using GlucoVault.Views;
+﻿using GlucoVault.Services;
+using GlucoVault.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -8,9 +9,12 @@ namespace GlucoVault
 {
     public partial class App : Application
     {
+        public static MealDatabase Database {get;set;}
         public App()
         {
             InitializeComponent();
+
+            Database = new MealDatabase();
 
             MainPage = new AppShell();
         }

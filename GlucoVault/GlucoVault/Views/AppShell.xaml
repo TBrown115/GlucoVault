@@ -77,11 +77,13 @@
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
         <Tab Icon="recipe.png"
-             Title="Recipes">
+             Title="Recipes"> 
             <ShellContent ContentTemplate="{DataTemplate views:DiabeticRecipes}"
                           Style="{StaticResource DomesticShell}"/>
         </Tab>
     </FlyoutItem>
+   <!-- <ShellContent Title="Meal Palnner" ContentTemplate="{DataTemplate views:MealPlannerPage}"
+                  Style="{StaticResource DomesticShell}"/> -->
 
     <FlyoutItem FlyoutDisplayOptions="AsSingleItem"
                 Title="Reminder">

@@ -18,6 +18,7 @@ namespace GlucoVault.Models
 				Breakfast = "Oats, Skim milk and Tea/Coffee (without sugar)",
 				Lunch = "Chicken breast (Grilled/steamed, Lettuce, tomato and avocado",
 				Dinner = "Brown rice, Carrot grated and Steamed broccoli",
+				Calories = 255,
 				ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 			});
 
@@ -27,6 +28,7 @@ namespace GlucoVault.Models
 				Breakfast = "Oats, Skim milk and Tea/Coffee (without sugar)",
 				Lunch = "Chicken breast (Grilled/steamed, Lettuce, tomato and avocado",
 				Dinner = "Brown rice, Carrot grated and Steamed broccoli",
+				Calories = 255,
 				ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 			});
 
@@ -36,6 +38,7 @@ namespace GlucoVault.Models
 				Breakfast = "Oats, Skim milk and Tea/Coffee (without sugar)",
 				Lunch = "Chicken breast (Grilled/steamed, Lettuce, tomato and avocado",
 				Dinner = "Checken",
+				Calories = 255,
 				ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 			});
 
@@ -45,6 +48,7 @@ namespace GlucoVault.Models
 				Breakfast = "Oats, Skim milk and Tea/Coffee (without sugar)",
 				Lunch = "Chicken breast (Grilled/steamed, Lettuce, tomato and avocado",
 				Dinner = "Brown rice, Carrot grated and Steamed broccoli",
+				Calories = 255,
 				ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 			});
 
@@ -54,6 +58,7 @@ namespace GlucoVault.Models
 				Breakfast = "Oats, Skim milk and Tea/Coffee (without sugar)",
 				Lunch = "Chicken breast (Grilled/steamed, Lettuce, tomato and avocado",
 				Dinner = "Brown rice, Carrot grated and Steamed broccoli",
+				Calories = 255,
 				ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
 			});
 
