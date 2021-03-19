@@ -10,11 +10,41 @@ using Entry = Microcharts.ChartEntry;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace GlucoVault.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ChartsPage : ContentPage
     {
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            VitalSignsItemDatabase database = await VitalSignsItemDatabase.Instance;
+
+            var items = await database.GetItemsAsync();
+
+            List<Entry> chartEntries = new List<Entry>();
+
+            foreach (var item in items)
+            {
+                var entry = new Entry((float)item.GlucLevel)
+                {
+                    Color = SKColor.Parse("#FF1493"),
+                    Label = "January",
+                    ValueLabel = "299"
+                };
+
+                chartEntries.Add(entry);
+
+            }
+
+            Chart2.Chart = new LineChart { Entries = chartEntries };
+
+        }
+
+
         List<Entry> entries = new List<Entry>
         {
             new Entry(200)
@@ -36,11 +66,11 @@ namespace GlucoVault.Views
                 ValueLabel = "100"
             }
         };
+
+
         public ChartsPage()
         {
             InitializeComponent();
-
-            Chart1.Chart = new PointChart { Entries = entries };
             Chart2.Chart = new BarChart { Entries = entries };
 
         }

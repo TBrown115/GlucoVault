@@ -18,8 +18,7 @@ namespace Todo
             var GlucLevelEntry = new Entry();
             GlucLevelEntry.SetBinding(Entry.TextProperty, "GlucLevel");
 
-            var createdOnEntry = new Entry();
-            createdOnEntry.SetBinding(Entry.TextProperty, "CreatedOn");
+            
 
             var doneSwitch = new Switch();
             doneSwitch.SetBinding(Switch.IsToggledProperty, "Done");
@@ -61,8 +60,7 @@ namespace Todo
                     new Label { Text = "BloodLevel" },
                     bloodLevelEntry,
 
-                    new Label { Text = "CreatedOn" },
-                    createdOnEntry,
+                  
 
                     new Label { Text = "GlucLevel" },
                     GlucLevelEntry,

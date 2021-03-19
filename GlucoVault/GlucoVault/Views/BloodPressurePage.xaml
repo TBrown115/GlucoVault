@@ -42,19 +42,15 @@
                                         <Label Grid.Column="2" Text="{Binding GlucLevel}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                                         <Label Grid.Column="3" Text="{Binding CreatedOn}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
 
-                                       
+
                                     </Grid>
-                                
+
                                 </ViewCell.View>
-                           
+
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-
-
-
-
             </StackLayout>
         </ScrollView>
 

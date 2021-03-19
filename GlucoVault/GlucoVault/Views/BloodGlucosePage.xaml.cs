@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Todo;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Entry = Microcharts.ChartEntry;
 
 namespace GlucoVault.Views
 {
@@ -22,7 +23,17 @@ namespace GlucoVault.Views
             base.OnAppearing();
 
             VitalSignsItemDatabase database = await VitalSignsItemDatabase.Instance;
-            listView.ItemsSource = await database.GetItemsAsync();
+
+            var items = await database.GetItemsAsync();
+
+            List<Entry> chartEntries = new List<Entry>();
+
+            foreach (var item in items)
+            {
+                var entry = new Entry((float)item.GlucLevel);
+                chartEntries.Add(entry);
+            }
+
         }
 
         async void OnItemAdded(object sender, EventArgs e)

@@ -15,6 +15,8 @@ namespace GlucoVault.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BloodPressurePage : ContentPage
     {
+
+
         public BloodPressurePage()
         {
             InitializeComponent();
