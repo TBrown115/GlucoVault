@@ -16,5 +16,10 @@ namespace GlucoVault.Views
         {
             InitializeComponent();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            listView.ItemsSource = App.Database.GetDailyMealPlans();
+        }
     }
 }

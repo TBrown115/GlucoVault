@@ -2,12 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GlucoVault.Views.DiabeticRecipes"
-             Title="Recipes">
+             Title="{Binding Description}">
     <ContentPage.Content>
         <StackLayout>
-            <!--Loading label should not render by default.-->
-            <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-            <WebView HeightRequest="1000" WidthRequest="1000" Source="https://newazure.z6.web.core.windows.net/" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+            <StackLayout x:Name="imageUrls" >
+                <Image Source="{Binding Image}" />
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
